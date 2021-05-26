@@ -8,8 +8,8 @@ import json
 
 
 
-folder='D:\Documents\Informatique\perso\Star_Wars_Archives'
-with open(os.path.join(os.path.abspath(folder),'star_wars_planets_final.json'),'r') as json_file:
+folder='C:\Users\ARyOtaRe\Documents\GitHub\Star-Wars-Archives'
+with open(os.path.join(os.path.abspath(folder),'Star_Wars_planets.json'),'r') as json_file:
     data = json.loads(json_file.read())
 
 
