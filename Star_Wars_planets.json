@@ -1,0 +1,260 @@
+{
+    "planets": {
+      "Tatooine": {
+       "rotation_period": "23",
+       "orbital_period": "304",
+       "diameter": "10465",
+       "climate": "arid",
+       "gravity": "1 standard",
+       "terrain": "desert",
+       "surface_water": "1",
+       "population": "200000",
+       "photo":"https://static.wikia.nocookie.net/starwars/images/b/b0/Tatooine_TPM.png/revision/latest/scale-to-width-down/403?cb=20131019121937"
+      },
+      "Alderaan": {
+       "rotation_period": "24",
+       "orbital_period": "364",
+       "diameter": "12500",
+       "climate": "temperate",
+       "gravity": "1 standard",
+       "terrain": "grasslands, mountains",
+       "surface_water": "40",
+       "population": "2000000000",
+       "photo":"https://static.wikia.nocookie.net/starwars/images/4/4a/Alderaan.jpg/revision/latest/scale-to-width-down/560?cb=20061211013805"
+      },
+      "Yavin_IV": {
+       "rotation_period": "24",
+       "orbital_period": "4818",
+       "diameter": "10200",
+       "climate": "temperate, tropical",
+       "gravity": "1 standard",
+       "terrain": "jungle, rainforests",
+       "surface_water": "8",
+       "population": "1000",
+       "photo":"https://static.wikia.nocookie.net/frstarwars/images/b/b4/Yavin_4.png/revision/latest?cb=20170712110415"
+      },
+      "Hoth": {
+       "rotation_period": "23",
+       "orbital_period": "549",
+       "diameter": "7200",
+       "climate": "frozen",
+       "gravity": "1.1 standard",
+       "terrain": "tundra, ice caves, mountain ranges",
+       "surface_water": "100",
+       "population": "0",
+       "photo":"https://static.wikia.nocookie.net/frstarwars/images/d/d1/Hoth.jpg/revision/latest/scale-to-width-down/350?cb=20150220140638"
+      },
+      "Dagobah": {
+       "rotation_period": "23",
+       "orbital_period": "341",
+       "diameter": "8900",
+       "climate": "murky",
+       "gravity": "N/A",
+       "terrain": "swamp, jungles",
+       "surface_water": "8",
+       "population": "0",
+       "photo":"https://static.wikia.nocookie.net/frstarwars/images/1/1c/Dagobah.jpg/revision/latest/scale-to-width-down/350?cb=20150220140000"
+      },
+      "Bespin": {
+       "rotation_period": "12",
+       "orbital_period": "5110",
+       "diameter": "118000",
+       "climate": "temperate",
+       "gravity": "1.5 (surface), 1 standard (Cloud City)",
+       "terrain": "gas giant",
+       "surface_water": "0",
+       "population": "6000000",
+       "photo":"https://static.wikia.nocookie.net/frstarwars/images/8/80/Bespin_TESB.png/revision/latest/scale-to-width-down/350?cb=20170202071746"
+      },
+      "Endor": {
+       "rotation_period": "18",
+       "orbital_period": "402",
+       "diameter": "4900",
+       "climate": "temperate",
+       "gravity": "0.85 standard",
+       "terrain": "forests, mountains, lakes",
+       "surface_water": "8",
+       "population": "30000000",
+       "photo":"https://vignette.wikia.nocookie.net/starwars/images/5/50/Endor_FFGRebellion.png"
+      },
+      "Naboo": {
+       "rotation_period": "26",
+       "orbital_period": "312",
+       "diameter": "12120",
+       "climate": "temperate",
+       "gravity": "1 standard",
+       "terrain": "grassy hills, swamps, forests, mountains",
+       "surface_water": "12",
+       "population": "4500000000",
+       "photo":"https://static.wikia.nocookie.net/frstarwars/images/3/3c/Naboo.png/revision/latest/scale-to-width-down/350?cb=20160325154930"
+      },
+      "Coruscant": {
+       "rotation_period": "24",
+       "orbital_period": "368",
+       "diameter": "12240",
+       "climate": "temperate",
+       "gravity": "1 standard",
+       "terrain": "cityscape, mountains",
+       "surface_water": "0",
+       "population": "1000000000000",
+       "photo":"https://static.wikia.nocookie.net/frstarwars/images/4/42/Coruscant.png/revision/latest?cb=20160513083512"
+      },
+      "Kamino": {
+       "rotation_period": "27",
+       "orbital_period": "463",
+       "diameter": "19720",
+       "climate": "temperate",
+       "gravity": "1 standard",
+       "terrain": "ocean",
+       "surface_water": "100",
+       "population": "1000000000",
+       "photo":"https://static.wikia.nocookie.net/frstarwars/images/7/7c/Kamino_2.jpg/revision/latest?cb=20150220141604"
+      },
+      "Geonosis": {
+       "rotation_period": "30",
+       "orbital_period": "256",
+       "diameter": "11370",
+       "climate": "temperate, arid",
+       "gravity": "0.9 standard",
+       "terrain": "rock, desert, mountain, barren",
+       "surface_water": "5",
+       "population": "100000000000",
+       "photo":"https://static.wikia.nocookie.net/frstarwars/images/a/a5/Geonosis.png/revision/latest/scale-to-width-down/350?cb=20160402134809"
+      },
+      "Utapau": {
+       "rotation_period": "27",
+       "orbital_period": "351",
+       "diameter": "12900",
+       "climate": "temperate, arid, windy",
+       "gravity": "1 standard",
+       "terrain": "scrublands, savanna, canyons, sinkholes",
+       "surface_water": "0.9",
+       "population": "95000000",
+       "photo":"https://static.wikia.nocookie.net/frstarwars/images/e/e1/Utapau.png/revision/latest/scale-to-width-down/350?cb=20150220144808"
+      },
+      "Mustafar": {
+       "rotation_period": "36",
+       "orbital_period": "412",
+       "diameter": "4200",
+       "climate": "hot",
+       "gravity": "1 standard",
+       "terrain": "volcanoes, lava rivers, mountains, caves",
+       "surface_water": "0",
+       "population": "20000",
+       "photo":"https://static.wikia.nocookie.net/frstarwars/images/6/61/Mustafar-TROSGG.png/revision/latest/scale-to-width-down/350?cb=20201021094213"
+      },
+      "Kashyyyk": {
+       "rotation_period": "26",
+       "orbital_period": "381",
+       "diameter": "12765",
+       "climate": "tropical",
+       "gravity": "1 standard",
+       "terrain": "jungle, forests, lakes, rivers",
+       "surface_water": "60",
+       "population": "45000000",
+       "photo":"https://static.wikia.nocookie.net/starwars/images/e/ea/Kashyyyk-SW-MTHC.png/revision/latest?cb=20190605010641"
+      },
+      "Polis_Massa": {
+       "rotation_period": "24",
+       "orbital_period": "590",
+       "diameter": "0",
+       "climate": "artificial temperate ",
+       "gravity": "0.56 standard",
+       "terrain": "airless asteroid",
+       "surface_water": "0",
+       "population": "1000000",
+       "photo":"https://static.wikia.nocookie.net/frstarwars/images/d/d2/Polis_Massa_surface.jpg/revision/latest?cb=20180415121044"
+      },
+      "Mygeeto": {
+       "rotation_period": "12",
+       "orbital_period": "167",
+       "diameter": "10088",
+       "climate": "frigid",
+       "gravity": "1 standard",
+       "terrain": "glaciers, mountains, ice canyons",
+       "surface_water": "0",
+       "population": "19000000",
+       "photo":"https://static.wikia.nocookie.net/frstarwars/images/e/ee/Mygeeto.jpg/revision/latest?cb=20150312140158"
+      },
+      "Felucia": {
+       "rotation_period": "34",
+       "orbital_period": "231",
+       "diameter": "9100",
+       "climate": "hot, humid",
+       "gravity": "0.75 standard",
+       "terrain": "fungus forests",
+       "surface_water": "0",
+       "population": "8500000",
+       "photo":"https://static.wikia.nocookie.net/frstarwars/images/a/a8/Felucia.png/revision/latest/scale-to-width-down/350?cb=20170714182032"
+      },
+      "Cato_Neimoidia": {
+       "rotation_period": "25",
+       "orbital_period": "278",
+       "diameter": "0",
+       "climate": "temperate, moist",
+       "gravity": "1 standard",
+       "terrain": "mountains, fields, forests, rock arches",
+       "surface_water": "0",
+       "population": "10000000",
+       "photo":"https://static.wikia.nocookie.net/frstarwars/images/5/5b/Cato_Neimoidia.png/revision/latest/scale-to-width-down/350?cb=20150207095053"
+      },
+      "Saleucami": {
+       "rotation_period": "26",
+       "orbital_period": "392",
+       "diameter": "14920",
+       "climate": "hot",
+       "gravity": "1 standard",
+       "terrain": "caves, desert, mountains, volcanoes",
+       "surface_water": "0",
+       "population": "1400000000",
+       "photo":"https://static.wikia.nocookie.net/frstarwars/images/7/75/Saleucami.jpg/revision/latest?cb=20150206135412"
+      },
+      "Stewjon": {
+       "rotation_period": "0",
+       "orbital_period": "0",
+       "diameter": "42",
+       "climate": "temperate",
+       "gravity": "1 standard",
+       "terrain": "grass",
+       "surface_water": "0",
+       "population": "0",
+       "photo":"https://i.redd.it/94430srq9ez41.png"
+     },
+     "Scarif": {
+       "rotation_period": "25",
+       "orbital_period": "125",
+       "diameter": "9112",
+       "climate": "Tropical, Temperate",
+       "gravity": "1 standard",
+       "terrain": "Oceans, rocky archipelagos, sandy beaches, verdant jungles, volcanic island chains",
+       "surface_water": "60",
+       "population": "475000",
+       "photo":"https://static.wikia.nocookie.net/starwars/images/6/6d/Scarif_SWCT.png/revision/latest?cb=20181010053537"
+      },
+      "Dathomir": {
+       "rotation_period": "24",
+       "orbital_period": "491",
+       "diameter": "10460",
+       "climate": "Temperate, cool",
+       "gravity": "90 % standard",
+       "terrain": "canyons, deserts, forests, mountains, oceans, Savannas, volcanoes",
+       "surface_water": "14",
+       "population": "4000000",
+       "photo":"https://static.wikia.nocookie.net/starwars/images/4/49/Dathomir.jpg/revision/latest?cb=20110208032408"
+      },
+      "Jakku": {
+       "rotation_period": "27",
+       "orbital_period": "352",
+       "diameter": "6400",
+       "climate": "Arid with cold nights",
+       "gravity": "1 standard",
+       "terrain": "Deserts ",
+       "surface_water": "5",
+       "population": "25000",
+       "photo":"https://static.wikia.nocookie.net/starwars/images/f/ff/Jakku-PoeDameronFlightLog.png/revision/latest?cb=20170720130554"
+      }
+     }
+   }
+   
+   
+   
