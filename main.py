@@ -4,11 +4,11 @@ from datetime import datetime
 import os
 import json
 
+"""
+https://github.com/Aiita/StarWarsElphebat/blob/25d927227fd71b117c44bf03c4e2a2cfa4f27dac/SWPlanets.json"""
 
 
-
-
-folder="C:\\Users\\ARyOtaRe\\Documents\\GitHub\\Star-Wars-Archives"
+folder='C:\\Users\\ARyOtaRe\\Documents\\GitHub\\Star-Wars-Archives'
 with open(os.path.join(os.path.abspath(folder),'Star_Wars_planets.json'),'r') as json_file:
     data = json.loads(json_file.read())
 
@@ -18,7 +18,7 @@ class Archives(commands.Bot):
         '''connecting'''
         general=client.get_channel(823948756705083433)
         await general.send ('I am a bold one.')
-        await client.change_presence(activity = discord.Activity(name = f"me boot up...", type = discord.ActivityType.watching)) # Simplistic help
+        await client.change_presence(activity = discord.Activity(name ="me boot up...", type = discord.ActivityType.watching)) # Simplistic help
 
         await client.change_presence(activity = discord.Activity(name ="with the devs\' nerves", type = discord.ActivityType.playing)) # Simplistic help
 
@@ -76,6 +76,11 @@ async def planet(ctx, arg):
 
     await ctx.send(embed=embed)
 
+
+@client.event
+async def on_disconnect():
+    general=client.get_channel(823948756705083433)
+    await general.send('Completing the archives, I will be right back.')
 
 
 client.run('ODI1Nzk1NDAzMTM1OTc1NTA0.YGDH5g.odpB4tmIlD7aNpY_xaKQg2GaEOI')
