@@ -61,14 +61,14 @@ async def invite(ctx):
 @client.command()
 async def planet(ctx, arg):
     embed=discord.Embed(title=f"Your planet is {arg}", description="If you want more info, ask the staff or put a suggestion!", color=0xE20088)\
-    .add_field(name="Rotation period:", value=f'{int(data["planets"][arg]["rotation_period"]):,.0f}', inline=False)\
-    .add_field(name="Orbital period:",value=f'{int(data["planets"][arg]["orbital_period"]):,.0f}', inline=False)\
-    .add_field(name="Diameter:",value=f'{int(data["planets"][arg]["diameter"]):,.0f}', inline=False)\
-    .add_field(name="Climate:",value=data["planets"][arg]["climate"], inline=False)\
-    .add_field(name='Gravity:', value=data["planets"][arg]["gravity"],inline=False)\
-    .add_field(name='Terrain:', value=data["planets"][arg]["terrain"],inline=False)\
-    .add_field(name='Surface water:', value=f'{data["planets"][arg]["surface_water"]}%',inline=False)\
-    .add_field(name='Population:', value=f'{int(data["planets"][arg]["population"]):,.0f}',inline=False)\
+    .add_field(name="**Rotation period**:", value=f'{int(data["planets"][arg]["rotation_period"]):,.0f}', inline=False)\
+    .add_field(name="**Orbital period:**",value=f'{int(data["planets"][arg]["orbital_period"]):,.0f}', inline=False)\
+    .add_field(name="**Diameter:**",value=f'{int(data["planets"][arg]["diameter"]):,.0f}', inline=False)\
+    .add_field(name="**Climate:**",value=data["planets"][arg]["climate"], inline=False)\
+    .add_field(name='**Gravity:**', value=data["planets"][arg]["gravity"],inline=False)\
+    .add_field(name='**Terrain:**', value=data["planets"][arg]["terrain"],inline=False)\
+    .add_field(name='**Surface water:**', value=f'{data["planets"][arg]["surface_water"]}%',inline=False)\
+    .add_field(name='**Population:**', value=f'{int(data["planets"][arg]["population"]):,.0f}',inline=False)\
     .set_footer(text="Star Wars Archives | Developped by BRΣ1ZH#8215,Killian#8237 and Aiita#6303")\
     .set_thumbnail(url = data["planets"][arg]["photo"])\
     .set_author(name="Here's the planet you were looking for:")
