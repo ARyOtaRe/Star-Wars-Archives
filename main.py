@@ -1,6 +1,7 @@
 import discord 
 from discord.ext import commands
 from datetime import datetime
+from time import sleep
 import os
 import json
 
@@ -18,8 +19,8 @@ class Archives(commands.Bot):
         '''connecting'''
         general=client.get_channel(823948756705083433)
         await general.send ('I am a bold one.')
-        await client.change_presence(activity = discord.Activity(name = f"me boot up...", type = discord.ActivityType.watching)) # Simplistic help
-
+        await client.change_presence(activity = discord.Activity(name = "me boot up...", type = discord.ActivityType.watching)) # Simplistic help
+        sleep(5)
         await client.change_presence(activity = discord.Activity(name ="with the devs\' nerves", type = discord.ActivityType.playing)) # Simplistic help
 
 
