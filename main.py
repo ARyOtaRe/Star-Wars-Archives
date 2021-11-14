@@ -11,7 +11,7 @@ https://github.com/Aiita/StarWarsElphebat/blob/25d927227fd71b117c44bf03c4e2a2cfa
 
 folder='C:\\Users\\ARyOtaRe\\Documents\\GitHub\\StarWarsElphebat'
 with open(os.path.join(os.path.abspath(folder),'SWPlanets.json'),'r') as json_file:
-    data = json.loads(json_file.read())
+    planet_dict = json.loads(json_file.read())
 
 
 class Archives(commands.Bot):
@@ -46,7 +46,7 @@ class Archives(commands.Bot):
         
 
     
-client= Archives(command_prefix=commands.when_mentioned_or('arch!'))
+client= Archives(command_prefix=commands.when_mentioned_or('ach!'))
 
 client.remove_command('help')
 
@@ -64,7 +64,7 @@ async def invite(ctx):
     await ctx.send(embed=embed) 
 
 
-Description = "\n".join(data["planets"].keys())
+Description = "\n".join(planet_dict["planets"].keys())
 
 
 @client.command()
@@ -80,17 +80,19 @@ async def list(ctx):
 
 @client.command()
 async def planet(ctx, arg):
+    org=f"{arg}".capitalize()
+    print(type(arg))
     embed=discord.Embed(title=f"Your planet is {arg}", description="If you want more info, ask the staff or put a suggestion!", color=0xE20088)\
-    .add_field(name="**Rotation period:**", value=f'{int(data["planets"][arg]["rotation_period"]):,.0f}', inline=False)\
-    .add_field(name="**Orbital period:**",value=f'{int(data["planets"][arg]["orbital_period"]):,.0f}', inline=False)\
-    .add_field(name="**Diameter:**",value=f'{int(data["planets"][arg]["diameter"]):,.0f}', inline=False)\
-    .add_field(name="**Climate:**",value=data["planets"][arg]["climate"], inline=False)\
-    .add_field(name='**Gravity:**', value=data["planets"][arg]["gravity"],inline=False)\
-    .add_field(name='**Terrain:**', value=data["planets"][arg]["terrain"],inline=False)\
-    .add_field(name='**Surface water:**', value=f'{data["planets"][arg]["surface_water"]}%',inline=False)\
-    .add_field(name='**Population:**', value=f'{int(data["planets"][arg]["population"]):,.0f}',inline=False)\
+    .add_field(name="**Rotation period:**", value=f'{int(planet_dict["planets"][arg.capitalize()]["rotation_period"]):,.0f}', inline=False)\
+    .add_field(name="**Orbital period:**",value=f'{int(planet_dict["planets"][arg]["orbital_period"]):,.0f}', inline=False)\
+    .add_field(name="**Diameter:**",value=f'{int(planet_dict["planets"][arg]["diameter"]):,.0f}', inline=False)\
+    .add_field(name="**Climate:**",value=planet_dict["planets"][arg]["climate"], inline=False)\
+    .add_field(name='**Gravity:**', value=planet_dict["planets"][arg]["gravity"],inline=False)\
+    .add_field(name='**Terrain:**', value=planet_dict["planets"][arg]["terrain"],inline=False)\
+    .add_field(name='**Surface water:**', value=f'{planet_dict["planets"][arg]["surface_water"]}%',inline=False)\
+    .add_field(name='**Population:**', value=f'{int(planet_dict["planets"][arg]["population"]):,.0f}',inline=False)\
     .set_footer(text="Star Wars Archives | Developed by BRΣ1ZH#8215 and Killian#8237")\
-    .set_thumbnail(url = data["planets"][arg]["photo"])\
+    .set_thumbnail(url = planet_dict["planets"][arg]["photo"])\
     .set_author(name="Here's the planet you were looking for:")
     embed.timestamp=datetime.now()
 
