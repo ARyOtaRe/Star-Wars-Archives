@@ -1,11 +1,11 @@
 import json
 
-with open('This\\is\\path\\to\\origin.json','r') as input_json_file:
+with open('C:\\Users\\ARyOtaRe\\Documents\\GitHub\\StarWarsElphebat\\SWPlanets.json','r') as input_json_file:
     data = json.loads(input_json_file.read())
 
-with open('That\\is\\path\\to\\destination.json','w') as output_json_file:
+with open('C:\\Users\\ARyOtaRe\\Documents\\GitHub\\Star-Wars-Archives\\SWPlanets.json','w') as output_json_file:
     oof=json.dumps(data, sort_keys=True,indent=2)
-    json.dump(oof,output_json_file)
+    output_json_file.write(oof)
 
 
 
