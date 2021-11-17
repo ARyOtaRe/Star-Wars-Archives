@@ -4,15 +4,19 @@ from datetime import datetime
 from time import sleep
 import os
 import json
+import requests
+
+
+
 
 """
 https://github.com/Aiita/StarWarsElphebat/blob/25d927227fd71b117c44bf03c4e2a2cfa4f27dac/SWPlanets.json"""
 
-
+"""
 folder='C:\\Users\\ARyOtaRe\\Documents\\GitHub\\StarWarsElphebat'
 with open(os.path.join(os.path.abspath(folder),'SWPlanets.json'),'r') as json_file:
     planet_dict = json.loads(json_file.read())
-
+"""
 
 class Archives(commands.Bot):
     async def on_ready(self):
@@ -50,7 +54,12 @@ client= Archives(command_prefix=commands.when_mentioned_or('ach!'))
 
 client.remove_command('help')
 
-
+@client.command()
+async def dbreload(ctx):
+    url='https://raw.githubusercontent.com/ARyOtaRe/Star-Wars-Archives/main/SWPlanets.json?token=ARM2OK3PR5L5IBJDK67GBITBT2P4K'
+    r=requests.get(url)
+    with open('C:\\Users\\ARyOtaRe\\Documents\\GitHub\\Star-Wars-Archives\\swat.json', 'wb') as output:
+        output.write(r.content)
 
 @client.command()
 async def invite(ctx):
@@ -63,12 +72,17 @@ async def invite(ctx):
     embed.timestamp=datetime.now()
     await ctx.send(embed=embed) 
 
-
+"""
 Description = "\n".join(planet_dict["planets"].keys())
-
+"""
 
 @client.command()
 async def list(ctx):
+    folder='C:\\Users\\ARyOtaRe\\Documents\\GitHub\\StarWarsElphebat'
+    with open(os.path.join(os.path.abspath(folder),'SWPlanets.json'),'r') as json_file:
+        planet_dict = json.loads(json_file.read())
+    Description = "\n".join(planet_dict["planets"].keys())
+
     embed=discord.Embed(title="Here's the list of all the planets you can search for:", description=Description, color=0xE20088)\
     .set_footer(text="Star Wars Archives | Developed by BRΣ1ZH#8215 and Killian#8237")\
     .set_thumbnail(url ="https://static.wikia.nocookie.net/frstarwars/images/2/2e/Holocron-TSWB.png/revision/latest?cb=20201021063046")\
@@ -80,8 +94,10 @@ async def list(ctx):
 
 @client.command()
 async def planet(ctx, arg):
-    org=f"{arg}".capitalize()
-    print(type(arg))
+    folder='C:\\Users\\ARyOtaRe\\Documents\\GitHub\\StarWarsElphebat'
+    with open(os.path.join(os.path.abspath(folder),'SWPlanets.json'),'r') as json_file:
+        planet_dict = json.loads(json_file.read())
+
     embed=discord.Embed(title=f"Your planet is {arg}", description="If you want more info, ask the staff or put a suggestion!", color=0xE20088)\
     .add_field(name="**Rotation period:**", value=f'{int(planet_dict["planets"][arg.capitalize()]["rotation_period"]):,.0f}', inline=False)\
     .add_field(name="**Orbital period:**",value=f'{int(planet_dict["planets"][arg]["orbital_period"]):,.0f}', inline=False)\
