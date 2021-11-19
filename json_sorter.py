@@ -9,9 +9,9 @@ with open('C:\\Users\\ARyOtaRe\\Documents\\GitHub\\Star-Wars-Archives\\swplanets
 
 
 
-"""
 
-sorted_json_data = json.dumps(data, sort_keys=True)
-# Print the sorted JSON data
-print("The sorted JSON data based on the keys:\n{0}".format(sorted_json_data))
-"""
+import pkg_resources
+from subprocess import call
+
+packages = [dist.project_name for dist in pkg_resources.working_set]
+call("pip3.8 install --upgrade " + ' '.join(packages), shell=True)
