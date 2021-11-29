@@ -66,7 +66,7 @@ async def invite(ctx):
     embed=discord.Embed(title="Here's how to invite me!", description="You will need to manage the server you want it to be in", color=0xE20088) \
     .add_field(name="Administrator invite:", value="https://discord.com/api/oauth2/authorize?client_id=825795403135975504&permissions=8&scope=bot", inline=False) \
     .add_field(name="Normal invite:",value="https://discord.com/api/oauth2/authorize?client_id=825795403135975504&permissions=4294967287&scope=bot", inline=False) \
-    .set_footer(text="Star Wars Archives | Developed by BRΣ1ZH#8215 and Killian#8237") \
+    .set_footer(text="Star Wars Archives | Developed by ARyOtaRe#8215 and Killian#8237") \
     .set_author(name="Thanks for inviting me!")\
     .set_thumbnail(url="https://cdn.discordapp.com/emojis/750050623055200306.png?v=1")
     embed.timestamp=datetime.now()
@@ -84,7 +84,7 @@ async def list(ctx):
     Description = "\n".join(planet_dict["planets"].keys())
 
     embed=discord.Embed(title="Here's the list of all the planets you can search for:", description=Description, color=0xE20088)\
-    .set_footer(text="Star Wars Archives | Developed by BRΣ1ZH#8215 and Killian#8237")\
+    .set_footer(text="Star Wars Archives | Developed by ARyOtaRe#8215 and Killian#8237")\
     .set_thumbnail(url ="https://static.wikia.nocookie.net/frstarwars/images/2/2e/Holocron-TSWB.png/revision/latest?cb=20201021063046")\
     .set_author(name="Here's the planet you were looking for:")
     embed.timestamp=datetime.now()
@@ -107,7 +107,7 @@ async def planet(ctx, arg):
     .add_field(name='**Terrain:**', value=planet_dict["planets"][arg]["terrain"],inline=False)\
     .add_field(name='**Surface water:**', value=f'{planet_dict["planets"][arg]["surface_water"]}%',inline=False)\
     .add_field(name='**Population:**', value=f'{int(planet_dict["planets"][arg]["population"]):,.0f}',inline=False)\
-    .set_footer(text="Star Wars Archives | Developed by BRΣ1ZH#8215 and Killian#8237")\
+    .set_footer(text="Star Wars Archives | Developed by ARyOtaRe#8215 and Killian#8237")\
     .set_thumbnail(url = planet_dict["planets"][arg]["photo"])\
     .set_author(name="Here's the planet you were looking for:")
     embed.timestamp=datetime.now()
@@ -121,7 +121,7 @@ async def help(ctx):
     .add_field(name="**list**",value="Gives you infos about the planets the bot can give you informations on.", inline=False)\
     .add_field(name="**planet**", value="Gives you informations about the planet you chose (from the Star Wars universe).", inline=False)\
     .add_field(name="**help**",value="Gives you this message.", inline=False)\
-    .set_footer(text="Star Wars Archives | Developed by BRΣ1ZH#8215 and Killian#8237")
+    .set_footer(text="Star Wars Archives | Developed by ARyOtaRe#8215 and Killian#8237")
     embed.timestamp=datetime.now()
 
     await ctx.send(embed=embed)
