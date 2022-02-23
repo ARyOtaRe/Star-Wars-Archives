@@ -19,7 +19,7 @@ class Archives(commands.Bot):
         '''connecting'''
         general=client.get_channel(823948756705083433)
         await general.send ('I am a bold one.')
-        await client.change_presence(activity = discord.Activity(name = f"me boot up...", type = discord.ActivityType.watching)) # Simplistic help
+        await client.change_presence(activity = discord.Activity(name = "me boot up...", type = discord.ActivityType.watching)) # Simplistic help
 
         await client.change_presence(activity = discord.Activity(name ="with the devs\' nerves", type = discord.ActivityType.playing)) # Simplistic help
 
@@ -72,13 +72,13 @@ async def invite(ctx):
 async def databasereload(ctx):
     url='https://raw.githubusercontent.com/ARyOtaRe/Star-Wars-Archives/main/SWPlanets.json?token=ARM2OK3PR5L5IBJDK67GBITBT2P4K'
     r=requests.get(url)
-    with open('/home/pi/starwarsarchives/swplanets.json', 'wb') as output:
+    with open('swplanets.json', 'wb') as output:
         output.write(r.content)
 
 
 @client.command(description='Gives you a list of the planets currently available in our database', aliases=['lst'])
 async def list(ctx):
-    folder='/home/pi/starwarsarchives'
+    folder='/home/aryotare/star_wars_archives'
     with open(os.path.join(os.path.abspath(folder),'swplanets.json'),'r') as jsonfile:
         data = json.loads(jsonfile.read())
     Description = "\n".join(data["planets"].keys())
@@ -94,7 +94,7 @@ data=json.loads(open(os.path.join(os.path.abspath('/home/pi/starwarsarchives'),'
 
 @client.command(description=f'Tells you facts about any Star Wars planet, we currently have {len(data["planets"].keys())} of them.', aliases=['info', 'plt','plnt'])
 async def planet(ctx,*,args):
-    folder='/home/pi/starwarsarchives'
+    folder='/home/aryotare/star_wars_archives'
     with open(os.path.join(os.path.abspath(folder),'swplanets.json'),'r') as json_file:
         data = json.loads(json_file.read())
     embed=discord.Embed(title=f"The planet you were looking for is {args}", description="If you want more info, ask the staff or write a suggestion!", color=0xE20088)\
@@ -126,12 +126,6 @@ async def help(ctx):
     await ctx.send(embed=embed)
 
 
-
-
-@client.event
-async def on_disconnect():
-    general=client.get_channel(823948756705083433)
-    await general.send('Completing the archives, I will be right back.')
 
 
 client.run('ODI1Nzk1NDAzMTM1OTc1NTA0.YGDH5g.odpB4tmIlD7aNpY_xaKQg2GaEOI')
