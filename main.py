@@ -6,7 +6,8 @@ import os
 import json
 import requests
 
-
+with open('tokens.json','r') as token_file:
+    Tokens=json.loads(token_file.read())
 
 
 """
@@ -136,7 +137,7 @@ async def on_disconnect():
     await general.send('Completing the archives, I will be right back.')
 
 
-client.run('ODI1Nzk1NDAzMTM1OTc1NTA0.YGDH5g.odpB4tmIlD7aNpY_xaKQg2GaEOI')
+client.run(Tokens["bot_token"]["token"])
 
 
 
