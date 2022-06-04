@@ -44,6 +44,28 @@
       "surface_water": "98",
       "terrain": "Rocky islands, Oceans "
     },
+    "Bogano": {
+      "climate": "Temperate, arid",
+      "diameter": "0",
+      "gravity": "1 standard",
+      "orbital_period": "0",
+      "photo": "https://static.wikia.nocookie.net/frstarwars/images/0/0c/Bogano.png",
+      "population": "1000000",
+      "rotation_period": "0",
+      "surface_water": "15",
+      "terrain": "Mesas, wetlands"
+    },
+    "Bracca": {
+      "climate": "Temperate",
+      "diameter": "0",
+      "gravity": "1 standard",
+      "orbital_period": "0",
+      "photo": "https://static.wikia.nocookie.net/frstarwars/images/f/fd/Bracca.jpg",
+      "population": "1000000",
+      "rotation_period": "0",
+      "surface_water": "0",
+      "terrain": "plains, landfills"
+    },
     "Cato Neimoidia": {
       "climate": "Temperate, moist",
       "diameter": "0",
@@ -108,7 +130,7 @@
       "population": "3000000000",
       "rotation_period": "25",
       "surface_water": "70",
-      "terrain": "Plains, Urban, hills,forests "
+      "terrain": "Plains, Urban, hills, forests "
     },
     "Coruscant": {
       "climate": "Temperate",
@@ -253,6 +275,17 @@
       "surface_water": "0",
       "terrain": "Rocky "
     },
+    "Ilum": {
+      "climate": "Frigid",
+      "diameter": "660000",
+      "gravity": "1 standard",
+      "orbital_period": "301",
+      "photo": "https://static.wikia.nocookie.net/starwars/images/6/66/StarkillerBase-FH.png",
+      "population": "100000",
+      "rotation_period": "66",
+      "surface_water": "100",
+      "terrain": "Oceans"
+    },
     "Iridonia": {
       "climate": "Unknown",
       "diameter": "0",
@@ -395,6 +428,17 @@
       "rotation_period": "87",
       "surface_water": "0",
       "terrain": "Urban, oceans, Swamps, bogs "
+    },
+    "Nur": {
+      "climate": "Temperate",
+      "diameter": "0",
+      "gravity": "1 standard",
+      "orbital_period": "0",
+      "photo": "https://static.wikia.nocookie.net/frstarwars/images/0/09/Nur.png",
+      "population": "100000",
+      "rotation_period": "0",
+      "surface_water": "100",
+      "terrain": "Oceans"
     },
     "Ojom": {
       "climate": "Frigid",
@@ -659,6 +703,17 @@
       "rotation_period": "24",
       "surface_water": "8",
       "terrain": "Jungle, rainforests"
+    },
+    "Zeffo": {
+      "climate": "Temperate",
+      "diameter": "0",
+      "gravity": "1 standard",
+      "orbital_period": "0",
+      "photo": "https://static.wikia.nocookie.net/frstarwars/images/5/5e/Zeffo.jpg",
+      "population": "100000000",
+      "rotation_period": "0",
+      "surface_water": "30",
+      "terrain": "Cliffs, ice caves, mountains"
     },
     "Zolan": {
       "climate": "Unknown",
