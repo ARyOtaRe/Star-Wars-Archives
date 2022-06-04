@@ -11,6 +11,8 @@ import requests
 """
 https://github.com/Aiita/StarWarsElphebat/blob/25d927227fd71b117c44bf03c4e2a2cfa4f27dac/SWPlanets.json"""
 
+with open('tokens.json','r') as token_file:
+    Tokens=json.loads(token_file.read())
 
 
 
@@ -90,7 +92,7 @@ async def list(ctx):
 
     await ctx.send(embed=embed)
 
-data=json.loads(open(os.path.join(os.path.abspath('/home/pi/starwarsarchives'),'swplanets.json'),'r').read())
+data=json.loads(open(os.path.join(os.path.abspath('/home/aryotare/starwarsarchives'),'swplanets.json'),'r').read())
 
 @client.command(description=f'Tells you facts about any Star Wars planet, we currently have {len(data["planets"].keys())} of them.', aliases=['info', 'plt','plnt'])
 async def planet(ctx,*,args):
@@ -128,7 +130,7 @@ async def help(ctx):
 
 
 
-client.run('ODI1Nzk1NDAzMTM1OTc1NTA0.YGDH5g.odpB4tmIlD7aNpY_xaKQg2GaEOI')
+client.run(Tokens["bot_token"]["token"])
 
 
 
