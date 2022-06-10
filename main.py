@@ -2,8 +2,8 @@
 # coding: utf-8
 # Created by: ARyOtaRe
 # Created on: Wed 26 May 2021 09:38:04
-# Last modified by:
-# Last modified on:
+# Last modified by: ARyOtaRe
+# Last modified on: 08/06/2022 14:21
 
 import discord
 from discord.ext import commands
@@ -23,7 +23,7 @@ class Archives(commands.Bot):
         general = client.get_channel(823948756705083433)
         await general.send('I am a bold one.')
         # Simplistic help
-        msg_boot = "me boot up..."
+        msg_boot = "myself booting up..."
         await client.change_presence(activity=discord.Activity(name=msg_boot,
                                      type=discord.ActivityType.watching))
         sleep(5)
@@ -49,14 +49,11 @@ nigel-ng-uncle-roger-failure-uncle-roger-failure-fail-gif-17897119')
 not-yet-mace-windu-star-wars-gif-9797353')
             print('not yet')
 
-        # Following url
-        # 'https://tenor.com/view/hello-there-hi-there-greetings-gif-944266'
-        # doesn't exists - Err 405
         elif any(element in message.content.lower() for element
                  in ['hello there', 'hi there', 'hello-there',
                      'hi-there', 'greetings']):
-            await message.channel.send('https://tenor.com/view/\
-grievous-general-kenobi-star-wars-gif-11406339')
+            await message.channel.send('https://tenor.com/view/hello-there-hi-\
+                there-greetings-gif-9442662')
             print('General Kenobi')
         else:
             await message.channel.send('https://www.gearfuse.com/wp-content/\
@@ -72,13 +69,11 @@ client.remove_command('help')
 
 
 @client.command()
+@commands.is_owner()
 async def dbreload(ctx):
     '''????Database Reload?????'''
     url = 'https://raw.githubusercontent.com/ARyOtaRe/Star-Wars-Archives/main/\
-SWPlanets.json?token=ARM2OK3PR5L5IBJDK67GBITBT2P4K'
-    # Full path token in a public repo.... NOT ADVISE! For security reasons
-    # Could it be some data stored as an Environment Variables??? And then use
-    # os.env.get('SWArchives-Token-URL')
+SWPlanets.json'
     r = requests.get(url)
     with open(os.path.join(os.getcwd(), 'swat.json'), 'wb') as output:
         output.write(r.content)
