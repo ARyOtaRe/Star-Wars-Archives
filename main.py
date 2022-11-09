@@ -25,12 +25,12 @@ class Archives(commands.Bot):
         # Simplistic help
         msg_boot = "myself booting up..."
         await client.change_presence(activity=discord.Activity(name=msg_boot,
-                                     type=discord.ActivityType.watching))
+                                    type=discord.ActivityType.watching))
         sleep(5)
         # Simplistic help
         msg_play = "with the devs\' nerves"
         await client.change_presence(activity=discord.Activity(name=msg_play,
-                                     type=discord.ActivityType.playing))
+                                    type=discord.ActivityType.playing))
         print("Ich bin der bold one")
 
     async def on_message(self, message):
@@ -50,8 +50,8 @@ not-yet-mace-windu-star-wars-gif-9797353')
             print('not yet')
 
         elif any(element in message.content.lower() for element
-                 in ['hello there', 'hi there', 'hello-there',
-                     'hi-there', 'greetings']):
+                in ['hello there', 'hi there', 'hello-there',
+                'hi-there', 'greetings']):
             await message.channel.send('https://tenor.com/view/hello-there-hi-\
                 there-greetings-gif-9442662')
             print('General Kenobi')
@@ -83,17 +83,17 @@ SWPlanets.json'
 async def invite(ctx):
     '''Invite SW bot to a discord group'''
     embed = discord.Embed(title="Here's how to invite me!",
-                          description="You will need to manage the server \
+                        description="You will need to manage the server \
 you want it to be in",
-                          color=0xE20088) \
+                        color=0xE20088) \
         .add_field(name="Administrator invite:",
-                   value="https://discord.com/api/oauth2/authorize?\
+                    value="https://discord.com/api/oauth2/authorize?\
 client_id=825795403135975504&permissions=8&scope=bot",
-                   inline=False) \
+                    inline=False) \
         .add_field(name="Normal invite:",
-                   value="https://discord.com/api/oauth2/authorize?client_id=\
+                    value="https://discord.com/api/oauth2/authorize?client_id=\
 825795403135975504&permissions=4294967287&scope=bot",
-                   inline=False) \
+                    inline=False) \
         .set_footer(text="Star Wars Archives | Developed by \
 ARyOtaRe#8215 and Killian#8237") \
         .set_author(name="Thanks for inviting me!")\
@@ -114,7 +114,7 @@ async def list(ctx):
 
     embed = discord.Embed(title="Here's the list of all the planets \
 you can search for:",
-                          description=Description, color=0xE20088)\
+                        description=Description, color=0xE20088)\
         .set_footer(text="Star Wars Archives | Developed by ARyOtaRe#8215 \
 and Killian#8237")\
         .set_thumbnail(url="https://static.wikia.nocookie.net/frstarwars/images/\
@@ -134,33 +134,33 @@ async def planet(ctx, arg: str):
     target_planet = planet_dict["planets"][arg.title()]
 
     embed = discord.Embed(title=f"Your planet is {arg.title()}",
-                          description="If you want more info, \
+                        description="If you want more info, \
 ask the staff or leave a suggestion!",
-                          color=0xE20088)\
+                        color=0xE20088)\
         .add_field(name="**Rotation period:**",
-                   value=f'{int(["rotation_period"]):,.0f}',
-                   inline=False)\
+                    value=f'{int(["rotation_period"]):,.0f}',
+                    inline=False)\
         .add_field(name="**Orbital period:**",
-                   value=f'{int(target_planet["orbital_period"]):,.0f}',
-                   inline=False)\
+                    value=f'{int(target_planet["orbital_period"]):,.0f}',
+                    inline=False)\
         .add_field(name="**Diameter:**",
-                   value=f'{int(target_planet["diameter"]):,.0f}',
-                   inline=False)\
+                    value=f'{int(target_planet["diameter"]):,.0f}',
+                    inline=False)\
         .add_field(name="**Climate:**",
-                   value=target_planet["climate"],
-                   inline=False)\
+                    value=target_planet["climate"],
+                    inline=False)\
         .add_field(name='**Gravity:**',
-                   value=target_planet["gravity"],
-                   inline=False)\
+                    value=target_planet["gravity"],
+                    inline=False)\
         .add_field(name='**Terrain:**',
-                   value=target_planet["terrain"],
-                   inline=False)\
+                    value=target_planet["terrain"],
+                    inline=False)\
         .add_field(name='**Surface water:**',
-                   value=f'{target_planet["surface_water"]}%',
-                   inline=False)\
+                    value=f'{target_planet["surface_water"]}%',
+                    inline=False)\
         .add_field(name='**Population:**',
-                   value=f'{int(target_planet["population"]):,.0f}',
-                   inline=False)\
+                    value=f'{int(target_planet["population"]):,.0f}',
+                    inline=False)\
         .set_footer(text="Star Wars Archives | \
 Developed by ARyOtaRe#8215 and Killian#8237")\
         .set_thumbnail(url=target_planet["photo"])\
@@ -174,20 +174,20 @@ Developed by ARyOtaRe#8215 and Killian#8237")\
 async def help(ctx):
     '''Display Help'''
     embed = discord.Embed(title="This is the list of the commands you can do",
-                          description="This is the current updated list, \
+                        description="This is the current updated list, \
 more to come.",
-                          color=0xE20088)\
+                        color=0xE20088)\
         .add_field(name="**list**",
-                   value="Gives you infos about the planets the bot can \
+                    value="Gives you infos about the planets the bot can \
 give you informations on.",
-                   inline=False)\
+                    inline=False)\
         .add_field(name="**planet**",
-                   value="Gives you informations about the planet \
+                    value="Gives you informations about the planet \
 you chose (from the Star Wars universe).",
-                   inline=False)\
+                    inline=False)\
         .add_field(name="**help**",
-                   value="Gives you this message.",
-                   inline=False)\
+                    value="Gives you this message.",
+                    inline=False)\
         .set_footer(text="Star Wars Archives | \
 Developed by ARyOtaRe#8215 and Killian#8237")
     embed.timestamp = datetime.now()
