@@ -137,7 +137,7 @@ async def planet(ctx, arg: str):
 ask the staff or leave a suggestion!",
                         color=0xE20088)\
         .add_field(name="**Rotation period:**",
-                    value=f'{int(["rotation_period"]):,.0f}',
+                    value=f'{int(target_planet["rotation_period"]):,.0f}',
                     inline=False)\
         .add_field(name="**Orbital period:**",
                     value=f'{int(target_planet["orbital_period"]):,.0f}',
@@ -161,12 +161,14 @@ ask the staff or leave a suggestion!",
                     value=f'{int(target_planet["population"]):,.0f}',
                     inline=False)\
         .set_footer(text="Star Wars Archives | \
-Developed by ARyOtaRe#8215 and Killian#8237")\
+Developed by ARyOtaRe#8215 and Killian#8237",icon_url="attachment://coruscant.png")\
         .set_thumbnail(url=target_planet["photo"])\
         .set_author(name="Here's the planet you were looking for:")
     embed.timestamp = datetime.now()
     print("euhhh planète")
-    await ctx.send(embed=embed)
+    file = discord.File("coruscant.png", filename="coruscant.png")
+    await ctx.send(file=file,embed=embed)
+    print("c'est envoyé")
 
 
 @client.command()
