@@ -48,7 +48,8 @@ nigel-ng-uncle-roger-failure-uncle-roger-failure-fail-gif-17897119')
             await message.channel.send(' https://tenor.com/view/\
 not-yet-mace-windu-star-wars-gif-9797353')
             print('not yet')
-
+        return await client.process_commands(message)
+"""
         elif any(element in message.content.lower() for element
                 in ['hello there', 'hi there', 'hello-there',
                 'hi-there', 'greetings']):
@@ -59,11 +60,9 @@ not-yet-mace-windu-star-wars-gif-9797353')
             await message.channel.send('https://www.gearfuse.com/wp-content/\
 uploads/2013/07/Han.gif')
             print('What now?')
+""" 
 
-        return await client.process_commands(message)
-
-
-client = Archives(command_prefix=commands.when_mentioned_or('ach!'))
+client = Archives(command_prefix=commands.when_mentioned_or('ach!'),intents=discord.Intents.all())
 
 client.remove_command('help')
 
@@ -75,7 +74,7 @@ async def dbreload(ctx):
     url = 'https://raw.githubusercontent.com/ARyOtaRe/Star-Wars-Archives/main/\
 SWPlanets.json'
     r = requests.get(url)
-    with open(os.path.join(os.getcwd(), 'swat.json'), 'wb') as output:
+    with open(os.path.join(os.getcwd(), 'SWPlanets.json'), 'wb') as output:
         output.write(r.content)
 
 
@@ -121,7 +120,7 @@ and Killian#8237")\
 2/2e/Holocron-TSWB.png/revision/latest?cb=20201021063046")\
         .set_author(name="Here's the planet you were looking for:")
     embed.timestamp = datetime.now()
-
+    print("euhhh liste!!")
     await ctx.send(embed=embed)
 
 
@@ -166,7 +165,7 @@ Developed by ARyOtaRe#8215 and Killian#8237")\
         .set_thumbnail(url=target_planet["photo"])\
         .set_author(name="Here's the planet you were looking for:")
     embed.timestamp = datetime.now()
-
+    print("euhhh planète")
     await ctx.send(embed=embed)
 
 
